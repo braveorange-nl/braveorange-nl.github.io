@@ -1,0 +1,259 @@
+:root {
+    --brave-orange: #f26225;
+}
+
+@font-face {
+    font-family: 'DIN Next LT Pro';
+    src: url('../../assets/fonts/DINNextLTPro-Regular.woff2') format('woff2'),
+    url('../../assets/fonts/DINNextLTPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Next LT Pro-Bold';
+    src: url('../../assets/fonts/DINNextLTPro-Bold.woff2') format('woff2'),
+    url('../../assets/fonts/DINNextLTPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'DIN Next LT Pro', sans-serif;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--brave-orange);
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 5rem);
+    padding: 5rem 5rem 0 5rem;
+}
+
+main h1 {
+    margin: 1rem 0 1rem 0;
+}
+
+header {
+    z-index: 10;
+    width: calc(100% - 10rem);
+    position: fixed;
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+header a img {
+    height: 1.5rem;
+    padding: 0.25rem 0;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tabs a {
+    font-family: 'DIN Next LT Pro-Bold', sans-serif;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1.5rem;
+    color: whitesmoke;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.tabs a:hover {
+    color: var(--brave-orange);
+    border-bottom-color: var(--brave-orange);
+}
+
+.tabs a.selected {
+    color: var(--brave-orange);
+    border-bottom-color: var(--brave-orange);
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    margin-bottom: 5rem;
+}
+
+.description {
+    display: flex;
+    justify-content: space-around;
+}
+
+.description .left {
+    width: 30%;
+}
+
+.description .right {
+    width: 30%;
+}
+
+.right img {
+    margin-top: 5rem;
+    background-color: white;
+    width: 70%;
+}
+
+.profile {
+    margin: 3rem 4rem 3rem 4rem;
+}
+
+.profile img {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.25rem whitesmoke;
+    height: 10rem;
+    filter: grayscale(100%);
+}
+
+.profile-left {
+    border-left: var(--brave-orange) solid 0.25rem;
+}
+
+.profile-right {
+    border-right: var(--brave-orange) solid 0.25rem;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.recommendation {
+    font-size: 1.5rem;
+    margin: auto;
+}
+
+blockquote {
+    quotes: "„" "“" "‚" "‘";
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+.vacancies {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.vacancy {
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+    margin: 0 2rem 2rem 0;
+    background-image: url('../../assets/images/vacancy.jpg');
+    background-size: cover;
+}
+
+.vacancy:hover {
+    background-image: url('../../assets/images/vacancy-hover.jpg');
+    transition: all 0.5s;
+}
+
+.vacancy h3 {
+    margin-bottom: 1rem;
+    padding: 0 0.25rem 0 0.25rem;
+    text-shadow: 1px 1px black;
+    font-family: "DIN Next LT Pro-Bold", sans-serif;
+}
+
+.vacancy div {
+    margin-bottom: 0.5rem;
+}
+
+.vacancy div span {
+    position: relative;
+    left: 0.75rem;
+}
+
+.vacancy .excerpt {
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+.vacancy-detail {
+    position: fixed;
+    top: 4rem;
+    left: 50%;
+    display: none;
+    margin-right: 6rem;
+}
+
+.vacancy-detail:target {
+    display: block;
+}
+
+.vacancy-detail:target + .vacancy {
+    background-image: url('../../assets/images/vacancy-hover.jpg');
+}
+
+.vacancy-detail h1 {
+    font-family: "DIN Next LT Pro-Bold", sans-serif;
+}
+
+.vacancy-detail .rows {
+    margin-bottom: 2rem;
+}
+
+.vacancy-detail .rows .row span {
+    position: relative;
+    left: 0.75rem;
+    margin-right: 3rem;
+}
+
+.vacancy-action {
+    text-align: center;
+    margin: 2rem;
+}
+
+.vacancy-action a {
+    color: var(--brave-orange);
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+.vacancy-action a:hover {
+    opacity: 0.5;
+}
+
+span.fa {
+    margin: 0 1rem 0 -2rem;
+}
+
+span.fa ~ a {
+    color: var(--brave-orange);
+}
+
+span.fa ~ a:hover {
+    text-decoration: underline;
+}
+
