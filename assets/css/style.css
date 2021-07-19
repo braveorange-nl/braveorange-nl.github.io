@@ -245,6 +245,49 @@ blockquote::after {
     opacity: 0.5;
 }
 
+.services {
+    margin: 0 5rem;
+}
+
+.services h2 {
+    margin-bottom: 1rem;
+}
+
+.services p {
+    margin-bottom: 1rem;
+}
+
+.services .columns {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* TODO: replace with media query? */
+    margin-bottom: 2rem;
+}
+
+.services .columns div {
+    width: 25%;
+    border-left: 0.25rem solid var(--brave-orange);
+    padding: 0 2rem;
+}
+
+.services .columns div p:last-of-type {
+    margin-bottom: 0;
+}
+
+.services .contact {
+    display: flex;
+    align-items: center;
+}
+
+.services figure {
+    margin: 2rem 4rem 2rem 2rem;
+}
+
+.services .contact .fa {
+    margin-left: 0;
+}
+
 span.fa {
     margin: 0 1rem 0 -2rem;
 }
